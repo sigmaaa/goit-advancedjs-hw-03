@@ -14,6 +14,12 @@ const refs = {
 
 import { getImages } from './js/pixabay-api';
 
+const lightbox = new SimpleLightbox('.gallery_link', {
+  captionsData: 'alt',
+  captionPosition: 'bottom',
+  captionDelay: 250,
+});
+
 refs.searchForm.addEventListener('submit', function (event) {
   event.preventDefault();
   const form = event.currentTarget;
@@ -44,7 +50,7 @@ refs.searchForm.addEventListener('submit', function (event) {
             return;
           }
           refs.gallery.innerHTML = createCardsMarkup(photos.hits);
-          new SimpleLightbox('.gallery_link');
+          lightbox.refresh();
         })
         .catch(error => console.log(error))
         .finally(() => setLoading(false)),
