@@ -6,7 +6,7 @@ import 'izitoast/dist/css/iziToast.min.css';
 import 'simplelightbox/dist/simple-lightbox.min.css';
 
 const refs = {
-  searchForm: document.querySelector('.js-search-from'),
+  searchForm: document.querySelector('form'),
   gallery: document.querySelector('.gallery'),
   notFoundText: document.querySelector('.js-not-found-text'),
   loader: document.querySelector('.loader'),
