@@ -10,7 +10,7 @@ export function createCardsMarkup(photos) {
         comments,
         downloads,
       }) =>
-        `<div class="gallery_item">
+        `<li class="gallery_item">
             <a class="gallery_link" href="${largeImageURL}">
                 <img class="gallery_image" src="${webformatURL}" alt="${tags}" />
             </a>
@@ -20,7 +20,7 @@ export function createCardsMarkup(photos) {
                 <p>Comments <span>${comments}</span></p>
                 <p>Downloads <span>${downloads}</span></p>
             </div>
-        </div>`
+        </li>`
     )
     .join('');
 }
